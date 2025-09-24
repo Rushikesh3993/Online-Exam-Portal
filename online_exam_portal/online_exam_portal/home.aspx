@@ -1,70 +1,89 @@
-﻿<%@ Import Namespace="System.Data.SqlClient" %>
-
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="online_exam_portal.home" %>
-
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Exam Portal - Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>Online Exam Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .hero { background-color: #007bff; color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; }
+        .features { padding: 60px 0; }
+        .feature-card { border-radius: 10px; padding: 30px; transition: transform 0.3s; }
+        .feature-card:hover { transform: scale(1.05); }
+        .footer { background-color: #1c1f23; color: #cfd2d6; padding: 20px 0; text-align: center; margin-top: 50px; }
+    </style>
 </head>
-<body class="bg-light">
+<body>
 
-    <div class="container" style="max-width: 400px; margin-top: 100px;">
-        <div class="card p-4 shadow">
-            <h3 class="text-center mb-3">Student Login</h3>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="Home.aspx"><i class="fa-solid fa-graduation-cap"></i> Online Exam</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="LoginExam.aspx"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dashboard.aspx"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            <form method="post">
-                <div class="mb-3">
-                    <label>Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Enter email" required />
+<!-- Hero Section -->
+<div class="hero">
+    <div class="container">
+        <h1>Welcome to Online Exam Portal</h1>
+        <p class="lead">Practice and test your skills in ASP.NET, C, Java, SQL, and Web Design</p>
+        <a href="LoginExam.aspx" class="btn btn-light btn-lg mt-3"><i class="fa-solid fa-arrow-right"></i> Start Exam</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card text-center bg-primary text-white">
+                    <i class="fa-solid fa-book fa-3x mb-3"></i>
+                    <h5>Multiple Subjects</h5>
+                    <p>Take exams in ASP.NET, C Language, Java, SQL, and Web Design.</p>
                 </div>
-                <div class="mb-3">
-                    <label>Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Enter password" required />
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card text-center bg-success text-white">
+                    <i class="fa-solid fa-chart-line fa-3x mb-3"></i>
+                    <h5>Track Performance</h5>
+                    <p>View your previous attempts and monitor your progress over time.</p>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Login</button>
-            </form>
-
-            <div class="mt-3 text-center text-danger">
-
-                <%
-                    if (!String.IsNullOrEmpty(Request.Form["email"]) && !String.IsNullOrEmpty(Request.Form["password"]))
-                    {
-                        string email = Request.Form["email"];
-                        string pass = Request.Form["password"];
-                        string connStr = @"Data Source=LAPTOP-J203V7TL\SQLEXPRESS;Initial Catalog=OnlineExamDB;Trusted_Connection=True;";
-
-                        using (SqlConnection con = new SqlConnection(connStr))
-                        {
-                            string query = "SELECT FullName FROM Users WHERE Email=@e AND Password=@p";
-                            SqlCommand cmd = new SqlCommand(query, con);
-                            cmd.Parameters.AddWithValue("@e", email);
-                            cmd.Parameters.AddWithValue("@p", pass);
-                            con.Open();
-                            object name = cmd.ExecuteScalar();
-
-                            if (name != null)
-                            {
-                                Session["FullName"] = name.ToString();
-                                Session["Email"] = email;
-                                Response.Redirect("dashboard.aspx");
-                            }
-                            else
-                            {
-                                Response.Write("Invalid email or password");
-                            }
-                        }
-                    }
-                %>
-
-
-                
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card text-center bg-warning text-dark">
+                    <i class="fa-solid fa-clock fa-3x mb-3"></i>
+                    <h5>Time-bound Exams</h5>
+                    <p>Practice under real exam conditions with time limits and scoring.</p>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <p>&copy; 2025 Online Exam Portal. All Rights Reserved.</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

@@ -78,6 +78,7 @@
     <Content Include="ManageQuestions.aspx" />
     <Content Include="ManageSubjects.aspx" />
     <Content Include="ViewResults.aspx" />
+    <Content Include="ViewResultsAdmin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +159,13 @@
     </Compile>
     <Compile Include="ViewResults.aspx.designer.cs">
       <DependentUpon>ViewResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewResultsAdmin.aspx.cs">
+      <DependentUpon>ViewResultsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewResultsAdmin.aspx.designer.cs">
+      <DependentUpon>ViewResultsAdmin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -56,6 +56,16 @@
             </a>
         </div>
 
+        <!-- Manage Questions -->
+        <div class="col-md-3">
+            <a href="ManageQuestions.aspx" style="text-decoration:none;">
+                <div class="card text-center p-4 shadow-sm">
+                    <h4>❓ Manage Questions</h4>
+                    <p class="text-muted">Add, delete questions for exams</p>
+                </div>
+            </a>
+        </div>
+
         <!-- View Results -->
         <div class="col-md-3">
             <a href="ViewResultsAdmin.aspx" style="text-decoration:none;">
@@ -70,7 +80,7 @@
         <div class="col-md-3">
             <a href="ManageUsers.aspx" style="text-decoration:none;">
                 <div class="card text-center p-4 shadow-sm">
-                    <h4>👥 Manage Users</h4>
+                    <h4>👥 Manage Students</h4>
                     <p class="text-muted">View or delete student accounts</p>
                 </div>
             </a>

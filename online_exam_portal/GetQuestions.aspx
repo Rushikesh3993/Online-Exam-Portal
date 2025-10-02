@@ -1,9 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" %>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
 <%@ Import Namespace="System.Data.SqlClient" %>
-
 <%
-    // 🔒 Redirect if not logged in
     if (Session["Email"] == null)
     {
         Response.Redirect("LoginExam.aspx");
@@ -22,12 +21,13 @@
 
     string connStr = @"Data Source=LAPTOP-J203V7TL\SQLEXPRESS;Initial Catalog=OnlineExamDB;Trusted_Connection=True;";
     int userID = 0;
+    int attemptsToday = 0;
 
     using (SqlConnection con = new SqlConnection(connStr))
     {
         con.Open();
 
-        // Get UserID from email
+        // Get user ID
         SqlCommand cmdUser = new SqlCommand("SELECT UserID FROM Users WHERE Email=@Email", con);
         cmdUser.Parameters.AddWithValue("@Email", Session["Email"].ToString());
         userID = Convert.ToInt32(cmdUser.ExecuteScalar());
@@ -35,34 +35,70 @@
         // Check today's attempts for this subject
         SqlCommand cmdAttempts = new SqlCommand(
             "SELECT COUNT(*) FROM TestResults " +
-            "WHERE UserID=@UserID AND SubjectID=@SubjectID AND CAST(TestDate AS DATE) = CAST(GETDATE() AS DATE)",
-            con
+            "WHERE UserID=@UserID AND SubjectID=@SubjectID AND CAST(TestDate AS DATE) = CAST(GETDATE() AS DATE)", con
         );
         cmdAttempts.Parameters.AddWithValue("@UserID", userID);
         cmdAttempts.Parameters.AddWithValue("@SubjectID", subjectID);
-        int attemptsToday = Convert.ToInt32(cmdAttempts.ExecuteScalar());
+        attemptsToday = Convert.ToInt32(cmdAttempts.ExecuteScalar());
+    }
 
-        if (attemptsToday >= 2) // max 2 attempts per day
-        {
+    if (attemptsToday >= 2)
+    {
 %>
-<div class="container mt-5">
-    <div class="alert alert-warning text-center">
-        ❌ You have already attempted this exam <strong><%= attemptsToday %> times</strong> today.<br />
-        You cannot attempt again until tomorrow.
-    </div>
-    <div class="text-center mt-3">
-        <a href="dashboard.aspx" class="btn btn-primary">⬅ Back to Dashboard</a>
+
+<div class="d-flex justify-content-center align-items-center vh-100" style="background: #f0f2f5;">
+    <div class="card text-center p-5 shadow-lg" 
+         style="max-width: 450px; border-radius: 20px; 
+                background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+                color: #343a40; box-shadow: 0 15px 25px rgba(0,0,0,0.2);">
+        
+        <!-- Warning Icon -->
+        <div class="mb-4" style="font-size: 4rem; color: #ff4c4c;">❌</div>
+
+        <!-- Heading -->
+        <h3 class="mb-3" style="font-weight: 700;">Exam Attempt Limit Reached</h3>
+
+        <!-- Message -->
+        <p class="mb-4" style="font-size: 1rem; line-height: 1.5; color: #2c2c2c;">
+            You have already attempted this exam <strong><%= attemptsToday %> times</strong> today.<br/>
+            You cannot attempt again until tomorrow.
+        </p>
+
+        <!-- Button -->
+        <a href="dashboard.aspx" 
+           class="btn btn-lg" 
+           style="background: #6a11cb; 
+                  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+                  color: #fff; 
+                  border-radius: 50px; 
+                  padding: 0.8rem 2.2rem; 
+                  font-weight: 600; 
+                  text-decoration: none;
+                  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                  transition: all 0.3s ease-in-out;">
+           ⬅ Back to Dashboard
+        </a>
     </div>
 </div>
-<%
-            return; // stop rendering exam
-        }
 
-        // Start exam timer if not already
-        if (Session["ExamStartTime"] == null)
-        {
-            Session["ExamStartTime"] = DateTime.Now;
-        }
+<style>
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    }
+</style>
+
+
+
+
+<%
+        return; // Stop rendering questions
+    }
+
+    // Set start time for the exam if not already set
+    if (Session["ExamStartTime"] == null)
+    {
+        Session["ExamStartTime"] = DateTime.Now;
     }
 %>
 
@@ -145,3 +181,4 @@
     </div>
 </body>
 </html>
+

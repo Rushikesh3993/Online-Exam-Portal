@@ -3,40 +3,8 @@
   "WorkspaceRootPath": "E:\\my_online_exam_portal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|e:\\my_online_exam_portal\\online_exam_portal\\viewresultsadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\viewresultsadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\managequestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\managequestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\managesubjects.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\managesubjects.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\admindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\admindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\checkanswers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\checkanswers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\getquestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\getquestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\loginexam.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -45,6 +13,42 @@
     {
       "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\viewresults.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\viewresults.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\admindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\admindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\viewresultsadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\viewresultsadmin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|e:\\my_online_exam_portal\\online_exam_portal\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\getquestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\getquestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\managequestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\managequestions.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\manageexams.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\managesubjects.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|solutionrelative:online_exam_portal\\managesubjects.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68C9FBEB-1130-4EB8-BBE1-7004CB0DF9C2}|online_exam_portal\\online_exam_portal.csproj|E:\\my_online_exam_portal\\online_exam_portal\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -62,7 +66,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Register.aspx",
+              "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\Register.aspx",
+              "RelativeDocumentMoniker": "online_exam_portal\\Register.aspx",
+              "ToolTip": "E:\\my_online_exam_portal\\online_exam_portal\\Register.aspx",
+              "RelativeToolTip": "online_exam_portal\\Register.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-03T13:49:55.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ViewResultsAdmin.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\ViewResultsAdmin.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\ViewResultsAdmin.aspx",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ManageQuestions.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\ManageQuestions.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\ManageQuestions.aspx",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "ManageExams.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\ManageExams.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\ManageExams.aspx",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "ManageSubjects.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\ManageSubjects.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\ManageSubjects.aspx",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "AdminLogin.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\AdminLogin.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\AdminLogin.aspx",
@@ -119,12 +136,11 @@
               "RelativeToolTip": "online_exam_portal\\AdminLogin.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-25T18:58:29.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T18:58:29.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "GetQuestions.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\GetQuestions.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\GetQuestions.aspx",
@@ -136,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "ViewResults.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\ViewResults.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\ViewResults.aspx",
@@ -144,11 +160,12 @@
               "RelativeToolTip": "online_exam_portal\\ViewResults.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-24T19:54:53.855Z"
+              "WhenOpened": "2025-09-24T19:54:53.855Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "CheckAnswers.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\CheckAnswers.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\CheckAnswers.aspx",
@@ -156,11 +173,12 @@
               "RelativeToolTip": "online_exam_portal\\CheckAnswers.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-24T19:55:01.669Z"
+              "WhenOpened": "2025-09-24T19:55:01.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "home.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\home.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\home.aspx",
@@ -173,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "LoginExam.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\LoginExam.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\LoginExam.aspx",
@@ -181,11 +199,12 @@
               "RelativeToolTip": "online_exam_portal\\LoginExam.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-24T19:54:55.605Z"
+              "WhenOpened": "2025-09-24T19:54:55.605Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "AdminDashboard.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\AdminDashboard.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\AdminDashboard.aspx",
@@ -193,11 +212,12 @@
               "RelativeToolTip": "online_exam_portal\\AdminDashboard.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-25T19:05:51.741Z"
+              "WhenOpened": "2025-09-25T19:05:51.741Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "dashboard.aspx",
               "DocumentMoniker": "E:\\my_online_exam_portal\\online_exam_portal\\dashboard.aspx",
               "RelativeDocumentMoniker": "online_exam_portal\\dashboard.aspx",

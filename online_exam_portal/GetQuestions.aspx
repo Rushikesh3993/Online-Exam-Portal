@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" %>
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
 <%@ Import Namespace="System.Data.SqlClient" %>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
 <%
     if (Session["Email"] == null)
     {
@@ -27,15 +27,12 @@
     {
         con.Open();
 
-        // Get user ID
         SqlCommand cmdUser = new SqlCommand("SELECT UserID FROM Users WHERE Email=@Email", con);
         cmdUser.Parameters.AddWithValue("@Email", Session["Email"].ToString());
         userID = Convert.ToInt32(cmdUser.ExecuteScalar());
 
-        // Check today's attempts for this subject
         SqlCommand cmdAttempts = new SqlCommand(
-            "SELECT COUNT(*) FROM TestResults " +
-            "WHERE UserID=@UserID AND SubjectID=@SubjectID AND CAST(TestDate AS DATE) = CAST(GETDATE() AS DATE)", con
+            "SELECT COUNT(*) FROM TestResults WHERE UserID=@UserID AND SubjectID=@SubjectID AND CAST(TestDate AS DATE)=CAST(GETDATE() AS DATE)", con
         );
         cmdAttempts.Parameters.AddWithValue("@UserID", userID);
         cmdAttempts.Parameters.AddWithValue("@SubjectID", subjectID);
@@ -46,56 +43,27 @@
     {
 %>
 
-<div class="d-flex justify-content-center align-items-center vh-100" style="background: #f0f2f5;">
-    <div class="card text-center p-5 shadow-lg" 
-         style="max-width: 450px; border-radius: 20px; 
-                background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-                color: #343a40; box-shadow: 0 15px 25px rgba(0,0,0,0.2);">
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card text-center shadow-lg border-0 p-5"
+         style="max-width: 480px; border-radius: 20px; background: #fff;">
         
-        <!-- Warning Icon -->
-        <div class="mb-4" style="font-size: 4rem; color: #ff4c4c;">❌</div>
-
-        <!-- Heading -->
-        <h3 class="mb-3" style="font-weight: 700;">Exam Attempt Limit Reached</h3>
-
-        <!-- Message -->
-        <p class="mb-4" style="font-size: 1rem; line-height: 1.5; color: #2c2c2c;">
-            You have already attempted this exam <strong><%= attemptsToday %> times</strong> today.<br/>
-            You cannot attempt again until tomorrow.
+        <div class="mb-4" style="font-size: 3.5rem; color: #ff4c4c;">🚫</div>
+        <h3 class="fw-bold text-danger">Attempt Limit Reached</h3>
+        <p class="mt-3 text-muted">
+            You have already attempted this exam <b><%= attemptsToday %></b> times today. <br>
+            Please try again tomorrow.
         </p>
 
-        <!-- Button -->
-        <a href="dashboard.aspx" 
-           class="btn btn-lg" 
-           style="background: #6a11cb; 
-                  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-                  color: #fff; 
-                  border-radius: 50px; 
-                  padding: 0.8rem 2.2rem; 
-                  font-weight: 600; 
-                  text-decoration: none;
-                  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-                  transition: all 0.3s ease-in-out;">
-           ⬅ Back to Dashboard
+        <a href="dashboard.aspx" class="btn btn-primary btn-lg mt-3 px-4 py-2 rounded-pill shadow">
+            ⬅ Back to Dashboard
         </a>
     </div>
 </div>
 
-<style>
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-    }
-</style>
-
-
-
-
 <%
-        return; // Stop rendering questions
+        return;
     }
 
-    // Set start time for the exam if not already set
     if (Session["ExamStartTime"] == null)
     {
         Session["ExamStartTime"] = DateTime.Now;
@@ -106,26 +74,68 @@
 <html>
 <head>
     <title>Exam - Online Exam Portal</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
-            background-color: #f8f9fa;
+            background: #f0f2f5;
+            font-family: 'Segoe UI', sans-serif;
         }
-
+        .exam-header {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .timer-box {
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: #fff3cd;
+            color: #856404;
+            border: 2px dashed #ffc107;
+            border-radius: 10px;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
         .question-card {
             background: #fff;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        .question-card:hover {
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        .btn-submit {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #20c997, #28a745);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2 class="text-center mt-4">📘 Exam</h2>
+    <div class="container py-4">
 
-        <form method="post" action="CheckAnswers.aspx">
+        <!-- Exam Header -->
+        <div class="exam-header shadow">
+            <h2 class="fw-bold">📘 Online Exam</h2>
+            <div class="timer-box" id="timer">⏳ Time Left: 15:00</div>
+        </div>
+
+        <form id="examForm" method="post" action="CheckAnswers.aspx">
             <%
                 int qNo = 1;
                 int totalQuestions = 0;
@@ -141,29 +151,30 @@
                     {
                         totalQuestions++;
             %>
-            <div class="question-card">
-                <h6><%= qNo %>. <%= Server.HtmlEncode(reader["QuestionText"].ToString()) %></h6>
 
-                <!-- Hidden QuestionID -->
+            <div class="question-card shadow-sm">
+                <h6 class="fw-bold mb-3"><%= qNo %>. <%= Server.HtmlEncode(reader["QuestionText"].ToString()) %></h6>
+
                 <input type="hidden" name="qid<%= qNo %>" value="<%= reader["QuestionID"] %>" />
 
-                <div class="form-check my-1">
+                <div class="form-check mb-2">
                     <input class="form-check-input" type="radio" name="ans<%= qNo %>" value="A" id="q<%= qNo %>A" required>
                     <label class="form-check-label" for="q<%= qNo %>A"><%= Server.HtmlEncode(reader["OptionA"].ToString()) %></label>
                 </div>
-                <div class="form-check my-1">
+                <div class="form-check mb-2">
                     <input class="form-check-input" type="radio" name="ans<%= qNo %>" value="B" id="q<%= qNo %>B" required>
                     <label class="form-check-label" for="q<%= qNo %>B"><%= Server.HtmlEncode(reader["OptionB"].ToString()) %></label>
                 </div>
-                <div class="form-check my-1">
+                <div class="form-check mb-2">
                     <input class="form-check-input" type="radio" name="ans<%= qNo %>" value="C" id="q<%= qNo %>C" required>
                     <label class="form-check-label" for="q<%= qNo %>C"><%= Server.HtmlEncode(reader["OptionC"].ToString()) %></label>
                 </div>
-                <div class="form-check my-1">
+                <div class="form-check">
                     <input class="form-check-input" type="radio" name="ans<%= qNo %>" value="D" id="q<%= qNo %>D" required>
                     <label class="form-check-label" for="q<%= qNo %>D"><%= Server.HtmlEncode(reader["OptionD"].ToString()) %></label>
                 </div>
             </div>
+
             <%
                         qNo++;
                     }
@@ -171,14 +182,40 @@
                 }
             %>
 
-            <!-- Total questions -->
             <input type="hidden" name="totalQuestions" value="<%= totalQuestions %>" />
 
             <div class="text-center">
-                <button type="submit" class="btn btn-success btn-lg">Submit Exam</button>
+                <button type="submit" class="btn-submit mt-3">✅ Submit Exam</button>
             </div>
         </form>
     </div>
+
+    <script>
+        // 15 minutes countdown
+        var totalTime = 15 * 60; // 15 minutes in seconds
+        var timerDisplay = document.getElementById("timer");
+        var examForm = document.getElementById("examForm");
+
+        function startTimer() {
+            var countdown = setInterval(function () {
+                var minutes = Math.floor(totalTime / 60);
+                var seconds = totalTime % 60;
+
+                timerDisplay.innerHTML = "⏳ Time Left: " + 
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+                    (seconds < 10 ? "0" + seconds : seconds);
+
+                totalTime--;
+
+                if (totalTime < 0) {
+                    clearInterval(countdown);
+                    alert("⏰ Time is up! Submitting your exam.");
+                    examForm.submit();
+                }
+            }, 1000);
+        }
+
+        startTimer();
+    </script>
 </body>
 </html>
-

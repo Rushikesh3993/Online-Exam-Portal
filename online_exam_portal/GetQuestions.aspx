@@ -201,8 +201,8 @@
                 var minutes = Math.floor(totalTime / 60);
                 var seconds = totalTime % 60;
 
-                timerDisplay.innerHTML = "⏳ Time Left: " + 
-                    (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+                timerDisplay.innerHTML = "⏳ Time Left: " +
+                    (minutes < 10 ? "0" + minutes : minutes) + ":" +
                     (seconds < 10 ? "0" + seconds : seconds);
 
                 totalTime--;

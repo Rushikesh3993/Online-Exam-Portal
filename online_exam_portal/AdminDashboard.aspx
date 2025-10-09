@@ -78,7 +78,7 @@
 
         <!-- Manage Users -->
         <div class="col-md-3">
-            <a href="ManageUsers.aspx" style="text-decoration:none;">
+            <a href="ManageStudents.aspx" style="text-decoration:none;">
                 <div class="card text-center p-4 shadow-sm">
                     <h4>👥 Manage Students</h4>
                     <p class="text-muted">View or delete student accounts</p>

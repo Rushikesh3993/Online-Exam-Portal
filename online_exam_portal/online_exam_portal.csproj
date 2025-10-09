@@ -69,13 +69,16 @@
   <ItemGroup>
     <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminLogout.aspx" />
     <Content Include="CheckAnswers.aspx" />
     <Content Include="dashboard.aspx" />
     <Content Include="GetQuestions.aspx" />
     <Content Include="home.aspx" />
     <Content Include="LoginExam.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="ManageExams.aspx" />
     <Content Include="ManageQuestions.aspx" />
+    <Content Include="ManageStudents.aspx" />
     <Content Include="ManageSubjects.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="ViewResults.aspx" />
@@ -96,6 +99,13 @@
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogout.aspx.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogout.aspx.designer.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckAnswers.aspx.cs">
       <DependentUpon>CheckAnswers.aspx</DependentUpon>
@@ -132,6 +142,13 @@
     <Compile Include="LoginExam.aspx.designer.cs">
       <DependentUpon>LoginExam.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManageExams.aspx.cs">
       <DependentUpon>ManageExams.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,6 +162,13 @@
     </Compile>
     <Compile Include="ManageQuestions.aspx.designer.cs">
       <DependentUpon>ManageQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStudents.aspx.cs">
+      <DependentUpon>ManageStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageStudents.aspx.designer.cs">
+      <DependentUpon>ManageStudents.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageSubjects.aspx.cs">
       <DependentUpon>ManageSubjects.aspx</DependentUpon>

@@ -31,7 +31,7 @@
                     <a class="nav-link" href="LoginExam.aspx"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Dashboard.aspx"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+                    <a class="nav-link" href="Dashboard.aspx"><i class="fa-solid fa-gauge"></i> Register</a>
                 </li>
             </ul>
         </div>
